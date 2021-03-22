@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify
 from data import db_session, news_api, news_resources
 from data.users import User
