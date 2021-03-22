@@ -213,8 +213,9 @@ def main():
     # db_sess.commit()
     api.add_resource(news_resources.NewsResource, '/api/v2/news/<int:news_id>')
     api.add_resource(news_resources.NewsListResource, '/api/v2/news')
-    app.run(host='0.0.0.0', port=5000)
 
 
 if __name__ == '__main__':
     main()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
